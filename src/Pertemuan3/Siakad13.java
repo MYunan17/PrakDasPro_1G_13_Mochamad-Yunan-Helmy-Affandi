@@ -14,7 +14,7 @@ public class Siakad13 {
     System.out.print("Masukkan NIM :");
     nim = sc.nextLine();
     System.out.print("Masukkan Kelas :");
-    kelas = sc.nextLine().charAt (4);
+    kelas = sc.nextLine().charAt (1);
     System.out.print("Masukkan nomor absen :");
     absen = sc.nextByte();
     System.out.print("Nilai kuis :");
