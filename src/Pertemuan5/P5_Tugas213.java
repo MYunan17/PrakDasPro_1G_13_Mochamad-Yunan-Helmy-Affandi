@@ -29,7 +29,7 @@ public class P5_Tugas213 {
             int nominalInt = (int) totalHarga;
             System.out.println("Item pembelian: " + jmlKopi + " kopi, " + jmlTeh + " teh, " + jmlRoti + " roti");
             System.out.println("Maaf anda tidak mendapat diskon karena bukan member");
-            System.out.println("Nominal yang harus dibayar: Rp " + nominalInt);
+            System.out.println("Nominal yang harus dibayar : Rp " + nominalInt);
          }
     }
 }
