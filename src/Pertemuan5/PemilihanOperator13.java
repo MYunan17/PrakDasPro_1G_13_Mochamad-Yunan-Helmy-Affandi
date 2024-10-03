@@ -15,25 +15,16 @@ public class PemilihanOperator13 {
         System.out.print("Massukan operator (+ - * /) : ");
         operator = sc.next().charAt(0);
         
-        if (operator=='+') {
-            hasil = angka1 + angka2 ;
-        } else {
-        }
-        if (operator=='-') {
-            hasil = angka1 - angka2 ;
-        } else {
-        }
-        if (operator=='*') {
-            hasil = angka1 * angka2 ;
-        } else {
-        }
-        if (operator=='/') {
+
+        
+        if (operator =='/') {
             hasil = angka1 / angka2 ;
-        } else {
-            System.out.println("operator yang dipilih tidak sesuai");
-        }
-    
+        } else if (operator == '+') {hasil = angka1 + angka2 ;
+        } else if  (operator == '-') {hasil = angka1 - angka2 ;
+        } else if  (operator == '*') {hasil = angka1 * angka2 ;
+        } else { System.out.println("Invalid Number");}
         System.out.println(angka1 + "" + operator + "" + angka2 + "=" + hasil);
     }
 }
+
     
