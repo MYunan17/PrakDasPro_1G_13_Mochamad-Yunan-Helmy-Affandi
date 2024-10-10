@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class P6_Tugas2 {
     public static void main(String[] args) {
-        Scanner input13= new Scanner(System.in);
+        Scanner sc= new Scanner(System.in);
         int jumlahbeli;
         double diskon,jumlahharga,harga;
         String jenisbuku;
         System.out.print("Massukan jenis buku yang akan di beli :");
-        jenisbuku = input13.nextLine();
+        jenisbuku = sc.nextLine();
         System.out.print("Massukan jumlah buku yang akan di beli : ");
-        jumlahbeli = input13.nextInt();
+        jumlahbeli = sc.nextInt();
 
         if (jenisbuku.equalsIgnoreCase("kamus")&&jumlahbeli>2) {
             harga = 10000;
