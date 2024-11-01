@@ -12,7 +12,10 @@ public class ArrayNilai13 {
         }
         for (int i = 0; i < 10; i++) {
             if (nilaiakhir[i]>70) {
-                System.out.println("Mahasiswa ke-"+i+" Lulus");
+                System.out.println("Mahasiswa ke-"+i+" Lulus!");
+            }
+            if (nilaiakhir[i]>=0 && nilaiakhir[i]<70){
+                System.out.println("Mahasiswa ke-"+i+" Tidak lulus!");
             }
         }
     }
