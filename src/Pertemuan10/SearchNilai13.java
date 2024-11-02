@@ -27,10 +27,10 @@ public class SearchNilai13 {
             }
             
         }
-      if (hasil == -1){
-       System.out.println();
-       System.out.println("Nilai yang dicari tidak ditemukan !!!");
-       System.out.println();
+        if (hasil == -1){
+            System.out.println();
+            System.out.println("Nilai yang dicari tidak ditemukan !!!");
+            System.out.println();
+          }
+        }
      }
-   }
-}
