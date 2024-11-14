@@ -13,8 +13,8 @@ public class Bioskop13 {
         penonton[3][0] = "Gisel";
         penonton[3][1] = "Hana";
        System.out.println(penonton.length);
-       for (int i = 0; i < penonton.length; i++) {
-         System.out.println("Panjang baris ke-"+(i+1)+": "+penonton[i].length);
+       for (String[] barispenonton: penonton) {
+        System.out.println("Panjang baris : " + barispenonton.length);
        }
 
     }
