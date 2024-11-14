@@ -16,6 +16,7 @@ public class BioskopWithScanner13 {
             String menu = sc.nextLine() ;
             if (menu.equals("1")) {
                 while (true) {
+                    System.out.println("");
                     System.out.print("Massukan nama : ");
                     String nama = sc.nextLine();
                     while (true) {
@@ -38,6 +39,11 @@ public class BioskopWithScanner13 {
                             break;  
                         }  
                     }
+
+                    if (penonton[baris-1][Kolom-1] != null) {
+                        System.out.println("Kursi sudah terisi ,silahkan melakukan input ulang");
+                        continue;
+                    }
         
                     sc.nextLine();
                     penonton[baris-1][Kolom-1] = nama ;   
@@ -46,8 +52,7 @@ public class BioskopWithScanner13 {
                     String next = sc.nextLine();
                     if (next.equalsIgnoreCase("N")) {
                         break;
-                    }
-                    
+                    } 
                 }  
             }
             if (menu.equals("2")) {
@@ -56,7 +61,11 @@ public class BioskopWithScanner13 {
                 while (i<4) {
                 int k = 0 ;
                 while (k<2) {
-                    System.out.println("Penonton baris " + (i+1)+" Kolom "+(k+1)+" : " + penonton[i][k]);
+                    String keluar = (penonton[i][k] != null) ? penonton[i][k] : "***";
+                    System.out.println("Penonton baris " + (i+1)+" Kolom "+(k+1)+" : " + keluar);
+                    if (penonton[i][k] == null) {
+                        
+                    }
                     k++;
                 }
                 i++;
