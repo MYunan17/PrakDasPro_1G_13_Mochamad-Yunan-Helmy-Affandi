@@ -23,8 +23,16 @@ public class BioskopWithScanner13 {
             if (next.equalsIgnoreCase("N")) {
                 break;
             }
-            
-
+        }
+            System.out.println("Daftar penonton : ");
+            int i=0;
+            while (i<4) {
+            int k = 0 ;
+            while (k<2) {
+                System.out.println("Penonton baris " + (i+1)+" Kolom "+(k+1)+" : " + penonton[i][k]);
+                k++;
+            }
+            i++;
         }
     }
 }
