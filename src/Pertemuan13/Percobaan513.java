@@ -2,29 +2,23 @@ package Pertemuan13;
 
 import java.util.Scanner;
 public class Percobaan513 {
-    public static void main(String [] args) { 
-        Scanner input = new Scanner (System.in);
-        int p,l,t,L, vol;
-        System.out.print("Masukkan panjang  : ");
-        p = input.nextInt ();
-        System.out.print("Masukkan lebar : ");
-        l= input.nextInt();
-        System.out.print("Masukkan tinggi : ");
-        t= input.nextInt();  
-
-        L=hitungluas(p, l);
-        System.out.println ("Luas Persegi panjang adalah "+L);
-
-        vol = hitungvolume(t, l, p);
-        System.out.println ("Volume balok adalah "+vol);
-    }        
-    public static int hitungluas (int pjg,int lb){
-        int Luas = pjg*lb;
-        return Luas;
+    public static void TampilHinggakei(int i) { 
+        for (int j = 0; j <= i; j++) {
+            System.out.println(j);
+        }
     }
-    public static int hitungvolume (int tinggi,int a,int b){
-        int Volume = hitungluas(a, b)*tinggi;
-        return Volume;
+    public static int jumlah (int bil1,int bil2) { 
+       return (bil1+bil2);
+    }
+    public static void Tampiljumlah (int bil1,int bil2) { 
+       TampilHinggakei(jumlah(bil1,bil2));
+    }
+
+    public static void main (String[] args) {
+        int temp = jumlah (1,1);
+        Tampiljumlah(temp, 5);
     }
     
+
 }
+
