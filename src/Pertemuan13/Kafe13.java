@@ -42,27 +42,38 @@ public class Kafe13 {
         System.out.print("Massukan kode diskon : ");
         String kode = sc.next();
         menu(nama,member,kode);
+        
+        int total= 0;
+
+        while (true) {
             System.out.print("\nMassukan nomor menu yang ingin anda pesan ");
             int pilihanmenu = sc.nextInt();
             System.out.print("Massukan jumlah item yang ingin anda pesan ");
             int banyakitems = sc.nextInt();
+            System.out.print("Tambah pesanan lagi ? (y/n): ");
+            String tambah = sc.next();
             int totalharga = hitungTotalharga13(pilihanmenu, banyakitems);
-            if (kode.equalsIgnoreCase("diskon30")) {
-                    int bayar = totalharga * 70/100 ;
+            total += totalharga;
+            if (tambah.equalsIgnoreCase("n")) {
+                if (kode.equalsIgnoreCase("diskon30")) {
+                     int bayar = total * 70/100 ;
                     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
                     System.out.println("Terimakasih sudah belanja");
-            }else if (kode.equalsIgnoreCase("diskon50")) {
-                    int bayar = totalharga * 50/100 ;
+                    break;
+                }else if (kode.equalsIgnoreCase("diskon50")) {
+                    int bayar = total * 50/100 ;
                     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
                     System.out.println("Terimakasih sudah belanja");
-            }else {
+                    break;
+                }else {
                     System.out.println("Total harga untuk pesanan Anda : Rp" +totalharga);
                     System.out.println("Terimakasih sudah belanja");
+                    break;
                 }
                 
-        
+        }
             
-        
+        }
 
         
     }
