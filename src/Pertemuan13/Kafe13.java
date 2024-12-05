@@ -42,20 +42,27 @@ public class Kafe13 {
         System.out.print("Massukan kode diskon : ");
         String kode = sc.next();
         menu(nama,member,kode);
-        System.out.print("\nMassukan nomor menu yang ingin anda pesan : ");
-        int pilihanmenu = sc.nextInt();
-        System.out.print("Massukan jumlah item yang ingin anda pesan : ");
-        int banyakitems = sc.nextInt();
-        int totalharga = hitungTotalharga13(pilihanmenu, banyakitems);
-
-        // if (kode.equalsIgnoreCase("diskon30")) {
-        //     int bayar = totalharga * 70/100 ;
-        //     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
-        // }else if (kode.equalsIgnoreCase("diskon50")) {
-        //     int bayar = totalharga * 50/100 ;
-        //     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
-        // }else {
-        // System.out.println("Total harga untuk pesanan Anda : Rp" +totalharga);}
+            System.out.print("\nMassukan nomor menu yang ingin anda pesan ");
+            int pilihanmenu = sc.nextInt();
+            System.out.print("Massukan jumlah item yang ingin anda pesan ");
+            int banyakitems = sc.nextInt();
+            int totalharga = hitungTotalharga13(pilihanmenu, banyakitems);
+            if (kode.equalsIgnoreCase("diskon30")) {
+                    int bayar = totalharga * 70/100 ;
+                    System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
+                    System.out.println("Terimakasih sudah belanja");
+            }else if (kode.equalsIgnoreCase("diskon50")) {
+                    int bayar = totalharga * 50/100 ;
+                    System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
+                    System.out.println("Terimakasih sudah belanja");
+            }else {
+                    System.out.println("Total harga untuk pesanan Anda : Rp" +totalharga);
+                    System.out.println("Terimakasih sudah belanja");
+                }
+                
+        
+            
+        
 
         
     }
