@@ -1,7 +1,9 @@
 package Pertemuan13;
 
+import java.util.Scanner;
+
 public class Kafe13 {
-    public static void menu(String namaPelangan, boolean ismember ,String diskon) {
+    public static void menu(String namaPelangan, boolean ismember,String diskon) {
         System.out.println("Selamat datang, "+ namaPelangan + "!");
         if (ismember) {
             System.out.println("Anda adalah member,dapatkan diskon 10% untuk setiap pembelian");
@@ -24,9 +26,37 @@ public class Kafe13 {
         System.out.println("==================================");
         System.out.println("Silahkan pilih menu yang anda inginkan.");
     }
+
+    public static int hitungTotalharga13 (int pilihanmenu,int banyakitem) {
+        int [] hargaitems = {15000,20000,22000,12000,10000,18000};
+
+        int hargaTotal = hargaitems[pilihanmenu - 1] * banyakitem;
+        return hargaTotal;
+    }
     public static void main(String[] args) {
-        menu("Andi",true,"Diskon50");
-        menu("Dimas",true,"Diskon30");
-        menu("Dimas",true,"Diskon10");
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Massukan nama : ");
+        String nama = sc.next();
+        System.out.print("apakah anda member ? (true/false) : ");
+        boolean member = sc.nextBoolean();
+        System.out.print("Massukan kode diskon : ");
+        String kode = sc.next();
+        menu(nama,member,kode);
+        System.out.print("\nMassukan nomor menu yang ingin anda pesan : ");
+        int pilihanmenu = sc.nextInt();
+        System.out.print("Massukan jumlah item yang ingin anda pesan : ");
+        int banyakitems = sc.nextInt();
+        int totalharga = hitungTotalharga13(pilihanmenu, banyakitems);
+
+        // if (kode.equalsIgnoreCase("diskon30")) {
+        //     int bayar = totalharga * 70/100 ;
+        //     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
+        // }else if (kode.equalsIgnoreCase("diskon50")) {
+        //     int bayar = totalharga * 50/100 ;
+        //     System.out.println("Total harga untuk pesanan Anda : Rp" +bayar);
+        // }else {
+        // System.out.println("Total harga untuk pesanan Anda : Rp" +totalharga);}
+
+        
     }
 }
